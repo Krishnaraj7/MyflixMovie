@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import requests from "@/utils/requests";
 import Moviegenre from "../../components/Genres/Moviegenre";
 
-const series = ({ series,totalPages = 500 }) => {
+const Series = ({ series,totalPages = 500 }) => {
   const [content, setContent] = useState([]);
   const [page, setPage] = useState(1);
   const [numOfPages, setNumOfPages] = useState();
@@ -44,7 +44,7 @@ const series = ({ series,totalPages = 500 }) => {
     window.scroll(0, 0);
     const genre = router.query.genre || "fetchTrending";
     fetchSeriesByGenre(genre);
-  }, [router.query.genre, page]);
+  }, [router.query.genre, page,]);
   
 
   const handleGenreChange = (genre) => {
@@ -90,7 +90,7 @@ const series = ({ series,totalPages = 500 }) => {
   );
 };
 
-export default series;
+export default Series;
 export async function getServerSideProps({ query }) {
   const options = {
     method: "GET",

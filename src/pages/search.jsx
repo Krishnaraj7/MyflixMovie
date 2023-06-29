@@ -45,12 +45,12 @@ export default function SearchResultPage() {
       <Navbar />
       <div className="pt-24">
         <h1 className=" text-xl  font-bold mb-4">
-          Search Results for "{query}"
+          Search Results for &quot;{query}&quot;
         </h1>
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  items-center mt-10 lg:px-5 px-5 ">
           {searchResults &&
             searchResults.map((result) => (
-              <Link
+              <Link key={result.id}
                 href={
                   result?.title
                     ? `/movie/${result?.id}`

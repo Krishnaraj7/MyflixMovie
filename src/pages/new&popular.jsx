@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import PopularList from "../../components/Pages/PopularList";
 import Navbar from "../../components/Navbar";
@@ -7,7 +7,7 @@ import CustomPagination from "../../components/Pagination/CustomPagination";
 import SimpleBottomNavigation from "../../components/BottomNav";
 import Head from "next/head";
 
-const movies = ({ movies, totalPages = 500 }) => {
+const Movies = ({ movies, totalPages = 500 }) => {
   const [content, setContent] = useState([]);
   const [page, setPage] = useState(1);
   const [numOfPages, setNumOfPages] = useState();
@@ -33,7 +33,6 @@ const movies = ({ movies, totalPages = 500 }) => {
       console.error(error);
     }
   };
-
   useEffect(() => {
     window.scroll(0, 0);
     fetchMovie();
@@ -76,7 +75,7 @@ const movies = ({ movies, totalPages = 500 }) => {
   );
 };
 
-export default movies;
+export default Movies;
 
 export async function getServerSideProps({ query }) {
   const options = {

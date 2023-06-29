@@ -72,7 +72,7 @@ const Navbar = () => {
       >
         <div className="relative flex items-center space-x-2 md:space-x-10">
           <Link href="/">
-            <Image src={logo} className="h-auto md:w-[140px] w-[90px]" />
+            <Image src={logo} alt="logo" className="h-auto md:w-[140px] w-[90px]" />
           </Link>
           <ul className="hidden space-x-4 md:flex">
             <Link href="/">

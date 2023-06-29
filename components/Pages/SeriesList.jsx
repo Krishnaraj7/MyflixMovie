@@ -27,6 +27,7 @@ const SeriesList = ({
           <div className="relative">
             <Image
               src={`${baseUrl}${seriesPost}`}
+              alt="poster"
               width={200}
               height={250}
               className={`rounded-[5px] hover:opacity-50 ${imageOpacity}`}

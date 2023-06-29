@@ -19,10 +19,10 @@ const MovieInfo = ({ media, similiar, fetchTrailer, cast }) => {
   const [isAdded, setIsAdded] = useState(false);
 
   useEffect(() => {
-    // Check if the media is in the watchlist on component mount
+    
     const isMediaAdded = watchlist.some((item) => item.id === media.id);
     setIsAdded(isMediaAdded);
-  }, []);
+  },  [watchlist, media.id]);
 
   const handleWatchlistClick = () => {
     if (isAdded) {
@@ -168,6 +168,7 @@ const MovieInfo = ({ media, similiar, fetchTrailer, cast }) => {
                             <div key={castItems?.id}>
                               <Image
                                 src={`${baseUrl}${castItems?.profile_path}`}
+                                alt="image"
                                 width={400}
                                 height={300}
                                 className="w-full
@@ -208,6 +209,7 @@ const MovieInfo = ({ media, similiar, fetchTrailer, cast }) => {
                       >
                         <Image
                           src={`${baseUrl}${result?.poster_path}`}
+                          alt="image"
                           width={400}
                           height={300}
                           className="w-full md:h-56 h-52 md:w-[150px] object-cover object-center rounded-md sm:hover:scale-105"

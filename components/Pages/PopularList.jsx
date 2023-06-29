@@ -37,6 +37,7 @@ const MovieList = ({
           <div className="relative">
             <Image
               src={`${baseUrl}${moviePost}`}
+              alt="poster"
               width={200}
               height={250}
               className={`rounded-[5px] md:hover:opacity-50 ${imageOpacity}`}

@@ -17,6 +17,7 @@ const Watchlist = ({ title, name, poster, mediaType, movieid }) => {
         <div className="relative flex flex-col items-center  w-[100%] cursor-pointer transition duration-300 ease-out">
           <Image
             src={`${baseUrl}${poster}`}
+            alt="image"
             width={200}
             height={250}
             className={`rounded-[5px] hover:scale-105 `}

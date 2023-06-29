@@ -18,7 +18,7 @@ const WatchlistPage = () => {
         ) : (
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  items-center mt-20 lg:px-5 px-5  ">
             {watchlist.map((item) => (
-              <div>
+              <div key={item.id}>
                 <Watchlist
                   key={item.id}
                   movieid={item.id}

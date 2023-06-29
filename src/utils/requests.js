@@ -4,9 +4,9 @@ export const baseUrl = "https://image.tmdb.org/t/p/original/";
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 
-// const BASE_URL = "https://api.themoviedb.org/3";
 
-export default {
+
+const fetch= {
     fetchTrending: {
         title:"Trending",
         url:`/trending/movie/week?api_key=${API_KEY}&language=en-US&sort_by=vote_average.desc`,
@@ -82,19 +82,5 @@ export default {
     
 
 }
+export default fetch;
 
-// const requests = {
-//   fetchTrending: `${BASE_URL}/trending/all/week?api_key=${API_KEY}`,
-//   fetchLatest: `${BASE_URL}/movie/latest?api_key=${API_KEY}`,
- 
-// };
-
-// export default requests;
-
-// fetchTrending: `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`,
-// fetchPopular: ` ${BASE_URL}/movie/popular?api_key=${API_KEY}&page=1`,
-// fetchLatest: `${BASE_URL}/movie/latest?api_key=${API_KEY}`,
-// fetchTvlatest: `${BASE_URL}/tv/latest?api_key=${API_KEY}`,
-// fetchtvToprated: `${BASE_URL}/tv/top_rated?api_key=${API_KEY}&page=1`,
-// fetchTvpopular: `${BASE_URL}/tv/popular?api_key=${API_KEY}&page=1`,
-// fetchMoviePosters:`${BASE_URL}/discover/movie?api_key=${API_KEY}`

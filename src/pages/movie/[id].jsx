@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 
 import { AiOutlineClose } from "react-icons/ai";
 import ReactPlayer from "react-player";
 
 import MovieInfo from "../../../components/Pages/MovieInfo";
 
-const movieDetailPage = ({ movie, more, moviecast }) => {
+const MovieDetailPage = ({ movie, more, moviecast }) => {
   const media = { ...movie };
   const similiar = { ...more };
   const cast = { ...moviecast };
@@ -68,6 +68,7 @@ const movieDetailPage = ({ movie, more, moviecast }) => {
     </>
   );
 };
+export default MovieDetailPage;
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
@@ -121,4 +122,4 @@ export async function getServerSideProps(context) {
     };
   }
 }
-export default movieDetailPage;
+

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import MovieList from "../../components/Pages/MovieList";
 import Navbar from "../../components/Navbar";
 import CustomPagination from "../../components/Pagination/CustomPagination";
@@ -14,7 +14,7 @@ const Movies = ({ movies, totalPages = 500 }) => {
   const [numOfPages, setNumOfPages] = useState();
   const router = useRouter();
 
-  const fetchMoviesByGenre = async (genre) => {
+  const fetchMoviesByGenre =  async (genre) => {
     try {
       const options = {
         method: "GET",
